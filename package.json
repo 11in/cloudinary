@@ -1,0 +1,24 @@
+{
+  "name": "@11in/cloudinary",
+  "version": "1.0.0",
+  "description": "Gives us some cloudinary stuff for 11ty",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/11in/cloudinary.git"
+  },
+  "keywords": [
+    "elfin",
+    "11ty",
+    "cloudinary"
+  ],
+  "author": "Ben Martinez-Bateman <ben@alwasyblank.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/11in/cloudinary/issues"
+  },
+  "homepage": "https://github.com/11in/cloudinary#readme"
+}
