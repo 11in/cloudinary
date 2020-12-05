@@ -130,4 +130,4 @@ const url = require('@11in/cloudinary/src/url')({
 })
 ----
 
-You'll need to pass an `options` object like the use used when isntantiating the plugin to each of the imports to get them to work correctly.
+You'll need to pass an `options` object like the one used when instantiating the plugin to each of the imports to get them to work correctly.
