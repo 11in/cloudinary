@@ -1,6 +1,30 @@
+:Author: Ben Martinez-Bateman
+:Email: ben@alwaysblank.org
+:toc: macro
+:toclevels: 3
+:toc-title:
+:sectanchors:
+:sectlinks:
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[]
+:tip-caption: 💡
+:note-caption: ℹ
+:important-caption: ❗
+:caution-caption: 🔥
+:warning-caption: ⚠
+endif::[]
+
 = Cloudinary
 
 This provides some shortcodes and filters for generating Cloudinary URLs.
+
+toc::[]
 
 == Usage
 
