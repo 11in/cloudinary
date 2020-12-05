@@ -52,6 +52,11 @@ module.exports = opts => {
             srcset = false
         }
 
+        // If there are no attrs, create them
+        if (!Array.isArray(attrs)) {
+            attrs = []
+        }
+        
         attrs.push(['src', url(path, transforms.concat([{
             width: size
         }]))])
