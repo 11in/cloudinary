@@ -117,3 +117,17 @@ The `url` filter behaves essentially the same as the shortcode, except that it t
 ----
 {{ 'image.jpg' | img([{ width: 470 }]) }}
 ----
+
+
+== Advanced Usage
+
+If, for some reason, you want direct access to the methods these filters use, they're availabel in the `src` directory, so you can get access to them like so:
+
+[source,javascript]
+----
+const url = require('@11in/cloudinary/src/url')({
+    name: 'cloud-name',
+})
+----
+
+You'll need to pass an `options` object like the use used when isntantiating the plugin to each of the imports to get them to work correctly.
