@@ -1,6 +1,6 @@
 {
   "name": "@11in/cloudinary",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Gives us some cloudinary stuff for 11ty",
   "main": ".eleventy.js",
   "scripts": {

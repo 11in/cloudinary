@@ -46,7 +46,7 @@ module.exports = opts => {
                     return `${src} ${current}w`
                 }
                 return `${carry}, ${src} ${current}w`
-            }, )
+            }, null)
         }
         if (typeof srcset !== 'string') {
             srcset = false
