@@ -1,6 +1,7 @@
 # Cloudinary
 
 This provides some shortcodes and filters for generating Cloudinary URLs.
+It's mostly just a wrapper around the [Cloudinary Node SDK](https://cloudinary.com/documentation/node_integration).
 
 ## Usage
 
