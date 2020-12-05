@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/11in/cloudinary/issues"
   },
-  "homepage": "https://github.com/11in/cloudinary#readme"
+  "homepage": "https://github.com/11in/cloudinary#readme",
+  "dependencies": {
+    "cloudinary": "^1.23.0"
+  }
 }
