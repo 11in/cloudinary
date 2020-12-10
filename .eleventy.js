@@ -1,13 +1,9 @@
-const {
-    join
-} = require('path')
-
 module.exports = {
     configFunction: (conf, options = {}) => {
         const opts = require('./src/options')(options);
 
         conf.addFilter('url', require('./src/url')(opts))
-        
+
         conf.addShortcode('url', args => {
             const {
                 path,

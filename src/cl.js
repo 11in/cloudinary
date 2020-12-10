@@ -6,9 +6,19 @@ module.exports = opts => {
         transforms
     } = opts
 
-    cloudinary.config({
-        cloud_name,
-    })
+    if (!cloud_name && !process.env.CLOUDINARY_URL) {
+        throw new Error(`You must either pass a 'name' parameter to @11in/cloudinary or set the CLOUDINARY_URL environment variable!`)
+    }
+
+    /**
+     * By this point, either cloud_name is set or CLOUDINARY_URL is, so
+     * it's fairly safe to only check for this one thing.
+     */
+    if (cloud_name) {
+        cloudinary.config({
+            cloud_name,
+        })
+    }
 
     return {
         url: (p, t) => {
