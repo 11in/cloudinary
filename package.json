@@ -1,6 +1,6 @@
 {
   "name": "@11in/cloudinary",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Gives us some cloudinary stuff for 11ty",
   "main": ".eleventy.js",
   "files": [
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/11in/cloudinary/issues"
   },
-  "homepage": "https://elfin.netlify.app/docs/cloudinary",
+  "homepage": "https://elfin.netlify.app/docs/cloudinary/",
   "dependencies": {
     "cloudinary": "^1.23.0"
   }
