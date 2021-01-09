@@ -1,7 +1,7 @@
 # Cloudinary
 
 This provides some shortcodes and filters for generating Cloudinary URLs.
-It's mostly just a wrapper around the [Cloudinary Node SDK](https://cloudinary.com/documentation/node_integration).
+It's mostly just a wrapper around the [Cloudinary Node SDK](https://cloudinary.com/documentation/node_integration), although it will attempt some coercion to get valid public IDs from various kinds of input.
 
 ## Usage
 
@@ -28,7 +28,7 @@ Use the shortcodes & filters:
 ```njk
 {% cl_img { path: 'image.jpg, transforms: [{ width: 670 }] } %}
 
-{{ 'image.jpg' | cl_image({width: 670}) }}
+{{ 'image.jpg' | cl_url({width: 670}) }}
 ```
 
 For more information, see the [full documentation](https://elfin.netlify.app/docs/cloudinary).

@@ -3,7 +3,8 @@ const cloudinary = require('cloudinary').v2
 module.exports = opts => {
     const {
         name: cloud_name,
-        transforms
+        transforms,
+        coerce,
     } = opts
 
     if (!cloud_name && !process.env.CLOUDINARY_URL) {
@@ -27,7 +28,22 @@ module.exports = opts => {
             } else {
                 t = transforms.concat(t)
             }
-            return cloudinary.url(p, {secure: true, transformation: t})
+            const args = {secure: true, transformation: t}
+            if (coerce) {
+                const {
+                    groups: {
+                        id,
+                        ver,
+                    }
+                } = p.match(/^(?<site>https?:\/\/[^/]*\/[^/]*)?\/?(?:v(?<ver>\d{2,})\/)?(?<id>.*)/m)
+                if (id) {
+                    p = id
+                }
+                if (ver) {
+                    args.version = ver
+                }
+            }
+            return cloudinary.url(p, args)
         }
     }
 }

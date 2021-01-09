@@ -1,6 +1,7 @@
 module.exports = options => {
     const opts = Object.assign({
         transforms: [],
+        coerce: true,
     }, options)
 
     // Object.assign isn't a deep merge, so we do this manually.
