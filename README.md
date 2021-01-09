@@ -26,7 +26,7 @@ module.exports = function (conf) {
 Use the shortcodes & filters:
 
 ```njk
-{% cl_img { path: 'image.jpg, transforms: [{ width: 670 }] } %}
+{% cl_img { path: 'image.jpg', transforms: [{ width: 670 }] } %}
 
 {{ 'image.jpg' | cl_url({width: 670}) }}
 ```
