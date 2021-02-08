@@ -31,4 +31,4 @@ Use the shortcodes & filters:
 {{ 'image.jpg' | cl_url({width: 670}) }}
 ```
 
-For more information, see the [full documentation](https://elfin.netlify.app/docs/cloudinary).
+For more information, see the [full documentation](https://11in.alwaysblank.dev/docs/cloudinary).
