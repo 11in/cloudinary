@@ -17,11 +17,17 @@ Add it to your `eleventy.config.js`:
 module.exports = function (conf) {
     conf.namespace('cl_', () => {
         conf.addPlugin(cloudinary, {
-            name: "your-cloud-name,
+            name: "your-cloud-name",
         })
     });
 }
 ```
+
+> You can alternatively set an environment variable called `CLOUDINARY_URL`.
+> It's found on your Cloudinary dashboard, and looks something like this:
+> ```shell
+> CLOUDINARY_URL=cloudinary://api-key:api-secret@your-cloud-name
+> ```
 
 Use the shortcodes & filters:
 
