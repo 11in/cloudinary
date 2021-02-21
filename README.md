@@ -31,10 +31,19 @@ module.exports = function (conf) {
 
 Use the shortcodes & filters:
 
-```njk
+```jinja
 {% cl_img { path: 'image.jpg', transforms: [{ width: 670 }] } %}
 
 {{ 'image.jpg' | cl_url({width: 670}) }}
+```
+
+Cloudinary is fairly good at extracting your asset ids from various URLs you might get out of Cloudinary (or, say, [Forestry](https://forestry.io/)).
+So you can also do something like this:
+
+```jinja
+{% cl_img { path: '/v1610229506/directory/2021/01/image.jpg', transforms: [{ width: 670 }] } %}
+
+{{ 'https://res.cloudinary.com/your-cloud-name/image/upload/v1613447983/image.jpg' | cl_url({width: 670}) }}
 ```
 
 For more information, see the [full documentation](https://11in.alwaysblank.dev/docs/cloudinary).
