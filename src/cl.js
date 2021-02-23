@@ -11,6 +11,10 @@ module.exports = opts => {
         throw new Error(`You must either pass a 'name' parameter to @11in/cloudinary or set the CLOUDINARY_URL environment variable!`)
     }
 
+    const {
+        match
+    } = require('./extract')(opts)
+
     /**
      * By this point, either cloud_name is set or CLOUDINARY_URL is, so
      * it's fairly safe to only check for this one thing.
@@ -31,16 +35,18 @@ module.exports = opts => {
             const args = {secure: true, transformation: t}
             if (coerce) {
                 const {
-                    groups: {
-                        id,
-                        ver,
-                    }
-                } = p.match(/^(?<site>https?:\/\/[^/]*\/[^/]*)?\/?(?:v(?<ver>\d{2,})\/)?(?<id>.*)/m)
+                    id,
+                    extension,
+                    version,
+                } = match(p)
                 if (id) {
                     p = id
                 }
-                if (ver) {
-                    args.version = ver
+                if (version) {
+                    args.version = version
+                }
+                if (extension && id) {
+                    p = `${id}.${extension}`
                 }
             }
             return cloudinary.url(p, args)

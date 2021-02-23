@@ -4,6 +4,17 @@ module.exports = {
 
         conf.addFilter('url', require('./src/url')(opts))
 
+        conf.addFilter('extract', (input, part) => {
+            const {match} = require('./src/extract')(opts)
+            const matches = match(input)
+
+            if (part && matches[part]) {
+                return matches[part]
+            }
+
+            return matches.id;
+        })
+
         conf.addShortcode('url', args => {
             const {
                 path,
